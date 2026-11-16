@@ -97,19 +97,26 @@ export function resolveApiKey(env: Record<string, string | undefined> = {}): str
 }
 
 /** Browser-safe complete(): talks to a same-origin or configured gateway. Never receives an API key. */
-export function gatewayComplete(gatewayUrl = '/api/instructor/ask'): CompleteFn {
+export function gatewayComplete(gatewayUrl = '/api/instructor/ask', timeoutMs = 15000): CompleteFn {
   return async (messages) => {
-    const response = await fetch(gatewayUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify({ messages }),
-      credentials: 'omit',
-    });
-    if (!response.ok) throw new Error(`Instructor request failed (${response.status}).`);
-    const data = (await response.json()) as { text?: string };
-    const text = data?.text?.trim();
-    if (!text) throw new Error('Instructor reply was empty.');
-    return text;
+    const controller = typeof AbortController === 'function' ? new AbortController() : undefined;
+    const timer = controller ? setTimeout(() => controller.abort(), timeoutMs) : undefined;
+    try {
+      const response = await fetch(gatewayUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ messages }),
+        credentials: 'omit',
+        signal: controller?.signal,
+      });
+      if (!response.ok) throw new Error(`Instructor request failed (${response.status}).`);
+      const data = (await response.json()) as { text?: string };
+      const text = data?.text?.trim();
+      if (!text) throw new Error('Instructor reply was empty.');
+      return text;
+    } finally {
+      if (timer) clearTimeout(timer);
+    }
   };
 }
 

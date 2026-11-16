@@ -1,0 +1,8 @@
+{
+  "name": "vr-training-api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Azure Static Web Apps managed function: server-side Meta AI instructor. The API key is read from the META_API_KEY app setting and never shipped to the browser.",
+  "main": "instructor-ask/index.js",
+  "engines": { "node": ">=20" }
+}
