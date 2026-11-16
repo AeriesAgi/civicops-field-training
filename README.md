@@ -68,8 +68,15 @@ The CUDA flag only skips an optional ONNX Runtime download; no GPU is needed.
 
 Code is released under the [MIT licence](LICENSE). Original artwork is CC0 1.0.
 Third-party CC0 / CC BY 4.0 assets are credited in
-[ASSETS.md](apps/vr-training/ASSETS.md) and in the app. Licensed character
-animation used by the hosted build is not included in this repository.
+[ASSETS.md](apps/vr-training/ASSETS.md) and in the app.
+
+**Assets removed from this repository.** The hosted judge build and the demo
+video use licensed Adobe Mixamo character animation (the street crew and the
+Roads marshal). Mixamo's terms allow that animation to be used and shown inside
+the app, but not redistributed as standalone files, so the animated models have
+been removed from this public repository. The models here are the same
+characters without their animation clips. Everything else needed to build and
+test the app is included.
 
 Built by **Culltron, South Africa**, by a solo founder working with AI coding and
 media tools.
