@@ -1,0 +1,937 @@
+{
+  "version": "iwsdk.scene.v1",
+  "units": "meters",
+  "player": {
+    "transform": {
+      "position": [
+        -5.2,
+        0,
+        8.8
+      ],
+      "rotationDeg": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "components": {
+    "com.iwsdk.components.IBLTexture": {
+      "src": "./textures/street-sky.hdr",
+      "intensity": 0.62,
+      "rotation": [
+        0,
+        0.9,
+        0
+      ]
+    },
+    "com.iwsdk.components.DomeTexture": {
+      "src": "./textures/street-sky.hdr",
+      "intensity": 0.48,
+      "rotation": [
+        0,
+        0.45,
+        0
+      ]
+    }
+  },
+  "resources": {},
+  "nodes": [
+    {
+      "id": "fire-session",
+      "name": "fire-session",
+      "content": {
+        "type": "group"
+      },
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "components": {
+        "SceneSafetySession": {},
+        "TrainingSession": {
+          "step": "place-blocker"
+        }
+      },
+      "children": [
+        {
+          "id": "fire-street",
+          "name": "fire-street",
+          "content": {
+            "type": "asset",
+            "asset": "fire-street"
+          },
+          "transform": {
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "LocomotionEnvironment": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "fire-engine",
+          "name": "fire-engine",
+          "content": {
+            "type": "asset",
+            "asset": "fire-engine"
+          },
+          "transform": {
+            "position": [
+              -6.9,
+              0,
+              14
+            ],
+            "rotationDeg": [
+              0,
+              180,
+              0
+            ]
+          },
+          "components": {
+            "SceneSafetyTarget": {
+              "kind": "blocker",
+              "partId": "engine"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "fire-cone-1",
+          "name": "fire-cone-1",
+          "content": {
+            "type": "asset",
+            "asset": "roads-cone"
+          },
+          "transform": {
+            "position": [
+              -6.45,
+              0,
+              9.7
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "SceneSafetyTarget": {
+              "kind": "cone",
+              "partId": "cone-1"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "fire-cone-2",
+          "name": "fire-cone-2",
+          "content": {
+            "type": "asset",
+            "asset": "roads-cone"
+          },
+          "transform": {
+            "position": [
+              -6.45,
+              0,
+              9.149999999999999
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "SceneSafetyTarget": {
+              "kind": "cone",
+              "partId": "cone-2"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "fire-cone-3",
+          "name": "fire-cone-3",
+          "content": {
+            "type": "asset",
+            "asset": "roads-cone"
+          },
+          "transform": {
+            "position": [
+              -6.45,
+              0,
+              8.6
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "SceneSafetyTarget": {
+              "kind": "cone",
+              "partId": "cone-3"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "fire-cone-4",
+          "name": "fire-cone-4",
+          "content": {
+            "type": "asset",
+            "asset": "roads-cone"
+          },
+          "transform": {
+            "position": [
+              -6.45,
+              0,
+              8.049999999999999
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "SceneSafetyTarget": {
+              "kind": "cone",
+              "partId": "cone-4"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "fire-cone-5",
+          "name": "fire-cone-5",
+          "content": {
+            "type": "asset",
+            "asset": "roads-cone"
+          },
+          "transform": {
+            "position": [
+              -6.45,
+              0,
+              7.499999999999999
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "SceneSafetyTarget": {
+              "kind": "cone",
+              "partId": "cone-5"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "fire-cone-6",
+          "name": "fire-cone-6",
+          "content": {
+            "type": "asset",
+            "asset": "roads-cone"
+          },
+          "transform": {
+            "position": [
+              -6.45,
+              0,
+              6.949999999999999
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "SceneSafetyTarget": {
+              "kind": "cone",
+              "partId": "cone-6"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "fire-flare-1",
+          "name": "fire-flare-1",
+          "content": {
+            "type": "asset",
+            "asset": "fire-flare"
+          },
+          "transform": {
+            "position": [
+              -6.05,
+              0,
+              9.4
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "SceneSafetyTarget": {
+              "kind": "flare",
+              "partId": "flare-1"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "fire-flare-2",
+          "name": "fire-flare-2",
+          "content": {
+            "type": "asset",
+            "asset": "fire-flare"
+          },
+          "transform": {
+            "position": [
+              -6.05,
+              0,
+              8.700000000000001
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "SceneSafetyTarget": {
+              "kind": "flare",
+              "partId": "flare-2"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "fire-flare-3",
+          "name": "fire-flare-3",
+          "content": {
+            "type": "asset",
+            "asset": "fire-flare"
+          },
+          "transform": {
+            "position": [
+              -6.05,
+              0,
+              8
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "SceneSafetyTarget": {
+              "kind": "flare",
+              "partId": "flare-3"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "fire-exclusion",
+          "name": "fire-exclusion",
+          "content": {
+            "type": "asset",
+            "asset": "fire-exclusion"
+          },
+          "transform": {
+            "position": [
+              -6.2,
+              0,
+              6.2
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "SceneSafetyTarget": {
+              "kind": "exclusion",
+              "partId": "exclusion"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "fire-tag-minor",
+          "name": "fire-tag-minor",
+          "content": {
+            "type": "asset",
+            "asset": "fire-tag-minor"
+          },
+          "transform": {
+            "position": [
+              -5.55,
+              0.02,
+              8.15
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "SceneSafetyTarget": {
+              "kind": "tag",
+              "partId": "minor"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "fire-tag-delayed",
+          "name": "fire-tag-delayed",
+          "content": {
+            "type": "asset",
+            "asset": "fire-tag-delayed"
+          },
+          "transform": {
+            "position": [
+              -5.55,
+              0.02,
+              7.73
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "SceneSafetyTarget": {
+              "kind": "tag",
+              "partId": "delayed"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "fire-tag-immediate",
+          "name": "fire-tag-immediate",
+          "content": {
+            "type": "asset",
+            "asset": "fire-tag-immediate"
+          },
+          "transform": {
+            "position": [
+              -5.55,
+              0.02,
+              7.3100000000000005
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "SceneSafetyTarget": {
+              "kind": "tag",
+              "partId": "immediate"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "fire-tag-expectant",
+          "name": "fire-tag-expectant",
+          "content": {
+            "type": "asset",
+            "asset": "fire-tag-expectant"
+          },
+          "transform": {
+            "position": [
+              -5.55,
+              0.02,
+              6.890000000000001
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "SceneSafetyTarget": {
+              "kind": "tag",
+              "partId": "expectant"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "fire-c1",
+          "name": "fire-c1",
+          "content": {
+            "type": "asset",
+            "asset": "fire-casualty-1"
+          },
+          "transform": {
+            "position": [
+              -5.2,
+              0.07,
+              5.6
+            ],
+            "rotationDeg": [
+              0,
+              150,
+              0
+            ]
+          },
+          "components": {
+            "SceneSafetyTarget": {
+              "kind": "casualty",
+              "partId": "c1"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "fire-c2",
+          "name": "fire-c2",
+          "content": {
+            "type": "asset",
+            "asset": "fire-casualty-2"
+          },
+          "transform": {
+            "position": [
+              -2.7,
+              0.286,
+              1.3
+            ],
+            "rotationDeg": [
+              68,
+              20,
+              0
+            ]
+          },
+          "components": {
+            "SceneSafetyTarget": {
+              "kind": "casualty",
+              "partId": "c2"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "fire-c3",
+          "name": "fire-c3",
+          "content": {
+            "type": "asset",
+            "asset": "fire-casualty-3"
+          },
+          "transform": {
+            "position": [
+              -1.5,
+              0.312,
+              -0.5
+            ],
+            "rotationDeg": [
+              82,
+              -25,
+              0
+            ]
+          },
+          "components": {
+            "SceneSafetyTarget": {
+              "kind": "casualty",
+              "partId": "c3"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "fire-c4",
+          "name": "fire-c4",
+          "content": {
+            "type": "asset",
+            "asset": "fire-casualty-4"
+          },
+          "transform": {
+            "position": [
+              -4.4,
+              0.321,
+              -1.5
+            ],
+            "rotationDeg": [
+              78,
+              40,
+              0
+            ]
+          },
+          "components": {
+            "SceneSafetyTarget": {
+              "kind": "casualty",
+              "partId": "c4"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "fire-ambulance",
+          "name": "fire-ambulance",
+          "content": {
+            "type": "asset",
+            "asset": "fire-ambulance"
+          },
+          "transform": {
+            "position": [
+              6.5,
+              0,
+              -9
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {},
+          "visible": true
+        },
+        {
+          "id": "fire-mast",
+          "name": "fire-mast",
+          "content": {
+            "type": "asset",
+            "asset": "fire-mast"
+          },
+          "transform": {
+            "position": [
+              -3.4,
+              0,
+              6.8
+            ],
+            "rotationDeg": [
+              0,
+              -30,
+              0
+            ]
+          },
+          "components": {},
+          "visible": true
+        },
+        {
+          "id": "fire-traffic-1",
+          "name": "fire-traffic-1",
+          "content": {
+            "type": "asset",
+            "asset": "roads-car"
+          },
+          "transform": {
+            "position": [
+              2.35,
+              0,
+              18
+            ],
+            "rotationDeg": [
+              0,
+              90,
+              0
+            ]
+          },
+          "components": {},
+          "visible": true
+        },
+        {
+          "id": "fire-traffic-2",
+          "name": "fire-traffic-2",
+          "content": {
+            "type": "asset",
+            "asset": "roads-car"
+          },
+          "transform": {
+            "position": [
+              2.35,
+              0,
+              4
+            ],
+            "rotationDeg": [
+              0,
+              90,
+              0
+            ]
+          },
+          "components": {},
+          "visible": true
+        },
+        {
+          "id": "fire-traffic-3",
+          "name": "fire-traffic-3",
+          "content": {
+            "type": "asset",
+            "asset": "roads-car"
+          },
+          "transform": {
+            "position": [
+              2.35,
+              0,
+              -12
+            ],
+            "rotationDeg": [
+              0,
+              90,
+              0
+            ]
+          },
+          "components": {},
+          "visible": true
+        },
+        {
+          "id": "street-actors",
+          "name": "street-actors",
+          "content": {
+            "type": "asset",
+            "asset": "street-actors",
+            "castShadow": false,
+            "receiveShadow": false
+          },
+          "transform": {
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "fire-steps-panel",
+      "name": "fire-steps-panel",
+      "content": {
+        "type": "asset",
+        "asset": "fire-steps-ui"
+      },
+      "transform": {
+        "position": [
+          -5.44,
+          1.38,
+          7.9
+        ],
+        "rotationDeg": [
+          -12,
+          12,
+          0
+        ]
+      },
+      "components": {
+        "RayInteractable": {},
+        "PokeInteractable": {}
+      },
+      "visible": true
+    },
+    {
+      "id": "fire-controls-panel",
+      "name": "fire-controls-panel",
+      "content": {
+        "type": "asset",
+        "asset": "fire-controls-ui"
+      },
+      "transform": {
+        "position": [
+          -4.96,
+          1.38,
+          7.9
+        ],
+        "rotationDeg": [
+          -12,
+          -12,
+          0
+        ]
+      },
+      "components": {
+        "RayInteractable": {},
+        "PokeInteractable": {}
+      },
+      "visible": true
+    },
+    {
+      "id": "fire-casualty-panel",
+      "name": "fire-casualty-panel",
+      "content": {
+        "type": "asset",
+        "asset": "fire-casualty-ui"
+      },
+      "transform": {
+        "position": [
+          -4.4,
+          1.3,
+          6.6
+        ],
+        "rotationDeg": [
+          -18,
+          0,
+          0
+        ]
+      },
+      "components": {
+        "RayInteractable": {},
+        "PokeInteractable": {}
+      },
+      "visible": false
+    },
+    {
+      "id": "fire-handover-panel",
+      "name": "fire-handover-panel",
+      "content": {
+        "type": "asset",
+        "asset": "fire-handover-ui"
+      },
+      "transform": {
+        "position": [
+          -5.2,
+          1.42,
+          7.75
+        ],
+        "rotationDeg": [
+          -14,
+          0,
+          0
+        ]
+      },
+      "components": {
+        "RayInteractable": {},
+        "PokeInteractable": {}
+      },
+      "visible": false
+    },
+    {
+      "id": "fire-results-panel",
+      "name": "fire-results-panel",
+      "content": {
+        "type": "asset",
+        "asset": "results-ui"
+      },
+      "transform": {
+        "position": [
+          -5.2,
+          1.42,
+          7.7
+        ],
+        "rotationDeg": [
+          -16,
+          0,
+          0
+        ]
+      },
+      "components": {
+        "RayInteractable": {},
+        "PokeInteractable": {}
+      },
+      "visible": false
+    },
+    {
+      "id": "night-key",
+      "transform": {
+        "position": [
+          6,
+          10,
+          8
+        ],
+        "rotationDeg": [
+          -38,
+          24,
+          0
+        ]
+      },
+      "components": {
+        "com.iwsdk.components.DirectionalLight": {
+          "color": [
+            1,
+            0.94,
+            0.83,
+            1
+          ],
+          "intensity": 1.1,
+          "castShadow": false
+        }
+      }
+    }
+  ],
+  "authoring": {
+    "views": [
+      {
+        "id": "hero",
+        "role": "hero",
+        "projection": "perspective",
+        "position": [
+          -4.2,
+          1.6,
+          14
+        ],
+        "target": [
+          -1.6,
+          1.1,
+          2
+        ],
+        "fov": 68
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+<style>
+  .water-network { flex-direction: column; width: 42; height: 28; background-color: #103d50; color: #ffffff; border-color: #7ca9b2; border-width: 0.08; border-radius: 1; padding-top: 1.3; padding-bottom: 1.3; padding-left: 1.5; padding-right: 1.5; gap: 0.6; }
+  .network-title { height: 4.7; flex-shrink: 0; font-size: 3.6; font-weight: 700; line-height: 1.1; }
+  .network-sketch { flex-direction: row; height: 4.6; flex-shrink: 0; align-items: center; justify-content: space-between; gap: 0.6; }
+  .network-valve { width: 5; height: 4.2; justify-content: center; align-items: center; color: #103d50; background-color: #c8e9ed; border-radius: 0.6; font-size: 2.8; font-weight: 700; }
+  .network-pipe { height: 0.5; width: 6; background-color: #c8e9ed; }
+  .network-burst { width: 10; font-size: 2.7; font-weight: 700; text-align: center; }
+  .network-critical { height: 3.6; flex-shrink: 0; font-size: 2.7; font-weight: 700; line-height: 1.1; color: #ffffff; }
+  .network-row { flex-direction: row; justify-content: space-between; gap: 0.8; height: 5.5; flex-shrink: 0; }
+  .network-button { width: 19; height: 5.5; justify-content: center; align-items: center; text-align: center; background-color: #f5d78c; color: #103d50; font-size: 2.7; font-weight: 700; border-radius: 0.6; cursor: pointer; }
+  .network-status { height: 3.6; flex-shrink: 0; font-size: 2.7; line-height: 1.1; }
+</style>
+<div id="panel-root" class="water-network">
+  <div class="network-title">ISOLATION PLAN</div>
+  <div class="network-sketch"><div class="network-valve">A</div><div class="network-pipe"></div><div class="network-burst">BURST</div><div class="network-pipe"></div><div class="network-valve">B</div></div>
+  <div class="network-critical">C / HOSPITAL / KEEP OPEN</div>
+  <div class="network-row"><button id="plan-primary" class="network-button">A then B</button><button id="plan-alternative" class="network-button">A then D</button></div>
+  <div id="network-status" class="network-status">A-D: use if B seized</div>
+</div>

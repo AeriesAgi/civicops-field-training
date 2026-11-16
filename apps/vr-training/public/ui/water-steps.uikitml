@@ -1,0 +1,25 @@
+<style>
+  .water-lesson { flex-direction: column; width: 32; height: 49; background-color: #f7f3e9; color: #103d50; border-color: #bad3d8; border-width: 0.08; border-radius: 1; padding-top: 1.3; padding-bottom: 1.3; padding-left: 1.5; padding-right: 1.5; gap: 0.7; }
+  .water-heading { flex-direction: row; justify-content: space-between; align-items: center; height: 4; flex-shrink: 0; }
+  .water-eyebrow { font-size: 2.7; font-weight: 700; line-height: 1.1; }
+  .water-why { width: 4; height: 3.5; justify-content: center; align-items: center; background-color: #103d50; color: #ffffff; border-radius: 1.7; font-size: 2.7; font-weight: 700; cursor: pointer; }
+  .water-jobs { width: 8; height: 3.5; justify-content: center; align-items: center; background-color: #103d50; color: #ffffff; border-radius: 0.5; font-size: 2.7; font-weight: 700; cursor: pointer; }
+  .water-current { height: 10; flex-shrink: 0; font-size: 4.2; font-weight: 700; line-height: 1.12; justify-content: center; padding-left: 1; padding-right: 1; background-color: #c8e9ed; border-radius: 0.6; }
+  .water-caption { height: 12.8; flex-shrink: 0; font-size: 2.7; line-height: 1.15; }
+  .water-checks { flex-direction: row; justify-content: space-between; gap: 0.35; height: 3.8; flex-shrink: 0; }
+  .water-check { width: 3.8; height: 3.8; font-size: 2.7; font-weight: 700; justify-content: center; align-items: center; border-radius: 0.5; background-color: #e3ebe5; color: #103d50; }
+  .water-notice { height: 6.3; flex-shrink: 0; font-size: 2.7; line-height: 1.15; }
+  .water-footer { height: 3.5; flex-shrink: 0; font-size: 2.7; line-height: 1.1; }
+</style>
+<div id="panel-root" class="water-lesson">
+  <div class="water-heading"><div class="water-eyebrow">WATER</div><button id="back-to-jobs" class="water-jobs">Jobs</button><button id="explain-why" class="water-why">?</button></div>
+  <div id="current-step" class="water-current">Make the area safe</div>
+  <div id="caption" class="water-caption">Pinch-place the barrier and sign.
+Keep spoil back from the edge.</div>
+  <div class="water-checks">
+    <div id="step-1" class="water-check">1</div><div id="step-2" class="water-check">2</div><div id="step-3" class="water-check">3</div><div id="step-4" class="water-check">4</div><div id="step-5" class="water-check">5</div><div id="step-6" class="water-check">6</div><div id="step-7" class="water-check">7</div>
+  </div>
+  <div id="step-progress" class="water-footer">0 / 7 complete</div>
+  <div id="safety-notice" class="water-notice">Illustrative training.
+Follow employer SOPs.</div>
+</div>

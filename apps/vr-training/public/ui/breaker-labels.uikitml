@@ -1,0 +1,10 @@
+<style>
+  .breakerlabels-labels { flex-direction: row; width: 35; height: 4.4; justify-content: space-between; align-items: center; background-color: #f7f3e9; border-color: #d5ddcf; border-width: 0.05; color: #173d38; border-radius: 0.3; }
+  .breakerlabels-label { width: 8; font-size: 2.1; font-weight: 700; text-align: center; }
+</style>
+<div id="panel-root" class="breakerlabels-labels">
+  <div id="breaker-label-1" class="breakerlabels-label">SL-1</div>
+  <div id="breaker-label-2" class="breakerlabels-label">SL-2</div>
+  <div id="breaker-label-3" class="breakerlabels-label">SL-3</div>
+  <div id="breaker-label-4" class="breakerlabels-label">SL-4</div>
+</div>

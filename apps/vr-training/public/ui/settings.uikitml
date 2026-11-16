@@ -1,0 +1,50 @@
+<style>
+  .settings-card { flex-direction: column; width: 33; height: 48; background-color: #f7f3e9; border-color: #d5ddcf; border-width: 0.08; border-radius: 1.1; padding-top: 1.5; padding-bottom: 1.5; padding-left: 1.4; padding-right: 1.4; gap: 1; color: #173d38; }
+  .settings-title { font-size: 4.2; font-weight: 700; color: #173d38; }
+  .settings-row { flex-direction: row; justify-content: space-between; gap: 0.8; }
+  .settings-button { width: 14.7; height: 6.6; justify-content: center; align-items: center; text-align: center; line-height: 1.15; background-color: #e7ede4; border-color: #cad6c5; border-width: 0.06; border-radius: 0.65; color: #173d38; font-size: 2.7; font-weight: 700; cursor: pointer; }
+  .settings-hint { background-color: #f5d78c; }
+  .settings-close { background-color: #173d38; color: #ffffff; }
+  .settings-fallback { display: none; flex-direction: column; gap: 0.8; }
+  .settings-label { font-size: 2.7; font-weight: 700; }
+  .settings-circuit { width: 7; height: 4.8; font-size: 2.7; }
+</style>
+<div id="panel-root" class="settings-card">
+  <div class="settings-title">Make it yours</div>
+  <div id="settings-row-1" class="settings-row">
+    <button id="one-handed" class="settings-button">One hand
+OFF</button>
+    <button id="high-contrast" class="settings-button">Contrast
+NORMAL</button>
+  </div>
+  <div id="settings-row-2" class="settings-row">
+    <button id="captions-toggle" class="settings-button">Captions
+ON</button>
+    <button id="gaze-pinch" class="settings-button">Gaze
+OFF</button>
+  </div>
+  <div id="settings-row-3" class="settings-row">
+    <button id="bench-down" class="settings-button">Bench
+lower</button>
+    <button id="bench-up" class="settings-button">Bench
+higher</button>
+  </div>
+  <div id="volume-row" class="settings-row">
+    <button id="volume-down" class="settings-button">Volume -</button>
+    <button id="volume-up" class="settings-button">Volume +
+70%</button>
+  </div>
+  <div id="settings-row-4" class="settings-row">
+    <button id="hint" class="settings-button settings-hint">Hint</button>
+    <button id="close-settings" class="settings-button settings-close">Done</button>
+  </div>
+  <div id="settings-fallback" class="settings-fallback">
+    <div id="settings-fallback-label" class="settings-label">SELECT CIRCUIT</div>
+    <div id="settings-fallback-row" class="settings-row">
+      <button id="identify-sl-1" class="settings-button settings-circuit">SL-1</button>
+      <button id="identify-sl-2" class="settings-button settings-circuit">SL-2</button>
+      <button id="identify-sl-3" class="settings-button settings-circuit">SL-3</button>
+      <button id="identify-sl-4" class="settings-button settings-circuit">SL-4</button>
+    </div>
+  </div>
+</div>

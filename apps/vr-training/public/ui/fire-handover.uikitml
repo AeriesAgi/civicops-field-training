@@ -1,0 +1,26 @@
+<style>
+  .fire-hand { flex-direction: column; width: 36; height: 52; background-color: #102d36; color: #ffffff; border-color: #f5d78c; border-width: 0.1; border-radius: 1; padding-top: 1.3; padding-bottom: 1.3; padding-left: 1.5; padding-right: 1.5; gap: 0.55; }
+  .fire-hand-title { height: 4.6; flex-shrink: 0; font-size: 4.2; font-weight: 700; color: #f5d78c; }
+  .fire-hand-copy { font-size: 2.7; font-weight: 700; line-height: 1.15; color: #ffffff; }
+  .fire-hand-counts { height: 6.4; flex-shrink: 0; }
+  .fire-hand-hazards { height: 6.4; flex-shrink: 0; }
+  .fire-hand-units { height: 11.2; flex-shrink: 0; }
+  .fire-hand-cable { height: 6.4; flex-shrink: 0; color: #f5d78c; }
+  .fire-hand-row { flex-direction: row; justify-content: space-between; gap: 0.7; height: 6.2; flex-shrink: 0; }
+  .fire-hand-button { width: 15.6; height: 6.2; justify-content: center; align-items: center; background-color: #f5d78c; color: #102d36; border-radius: 0.6; font-size: 2.7; font-weight: 700; cursor: pointer; }
+  .fire-hand-secondary { background-color: #f7f3e9; }
+</style>
+<div id="panel-root" class="fire-hand">
+  <div id="handover-title" class="fire-hand-title">HANDOVER CARD</div>
+  <div id="handover-counts" class="fire-hand-copy fire-hand-counts">Minor 0  Delayed 0
+Immediate 0  Expectant 0</div>
+  <div id="handover-hazards" class="fire-hand-copy fire-hand-hazards">Hazards pending.
+Size up the scene.</div>
+  <div id="handover-units" class="fire-hand-copy fire-hand-units">Electricity isolation
+Fire suppression
+EMS transport
+Traffic control</div>
+  <div id="handover-cable" class="fire-hand-copy fire-hand-cable">Cable stays live until
+Electricity confirms dead.</div>
+  <div class="fire-hand-row"><button id="see-results" class="fire-hand-button">Results</button><button id="handover-jobs" class="fire-hand-button fire-hand-secondary">Jobs</button></div>
+</div>

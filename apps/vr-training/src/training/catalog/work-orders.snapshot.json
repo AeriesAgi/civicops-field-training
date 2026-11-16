@@ -1,0 +1,279 @@
+{
+  "schema": "civicops.training.work-orders.snapshot.v1",
+  "version": "1.0.0",
+  "source": {
+    "kind": "synthetic-sample",
+    "note": "Sample municipal work-order catalogue authored for training practice. Not live municipal data.",
+    "snapshotDate": "2026-10-08",
+    "readOnly": true
+  },
+  "skills": [
+    {
+      "code": "WATER.PIPE_REPAIR",
+      "name": "Pipe repair",
+      "discipline": "plumbing"
+    },
+    {
+      "code": "ELEC.FAULT_ISOLATION",
+      "name": "Electrical fault isolation",
+      "discipline": "electrical"
+    },
+    {
+      "code": "ELEC.LIVE_WIRE_SAFETY",
+      "name": "Downed conductor scene safety",
+      "discipline": "electrical"
+    },
+    {
+      "code": "ROADS.SURFACE_REPAIR",
+      "name": "Road surface repair",
+      "discipline": "roads"
+    },
+    {
+      "code": "ROADS.TRAFFIC_CONTROL",
+      "name": "Traffic control",
+      "discipline": "roads"
+    },
+    {
+      "code": "ROADS.DRAIN_CLEARANCE",
+      "name": "Stormwater drain clearance",
+      "discipline": "roads"
+    }
+  ],
+  "certificationTypes": [
+    {
+      "code": "SAFETY.PPE",
+      "name": "Municipal PPE and scene safety",
+      "validityMonths": 12,
+      "issuingBasis": "simulation"
+    },
+    {
+      "code": "WATER.PIPE_ASSESSMENT",
+      "name": "Pipe repair field assessment",
+      "validityMonths": 24,
+      "issuingBasis": "field-assessment"
+    },
+    {
+      "code": "ELEC.AUTHORISED_PERSON",
+      "name": "Authorised electrical person",
+      "validityMonths": 12,
+      "issuingBasis": "external"
+    },
+    {
+      "code": "ROADS.TRAFFIC_ASSESSMENT",
+      "name": "Traffic protection assessment",
+      "validityMonths": 12,
+      "issuingBasis": "field-assessment"
+    }
+  ],
+  "workOrderTypes": [
+    {
+      "code": "WATER.BURST_MAIN",
+      "serviceCode": "WATER",
+      "category": "Water",
+      "department": "Water and Sanitation",
+      "title": "Burst water main",
+      "description": "Municipal water main failure requiring isolation and controlled repair.",
+      "hazardClass": "high",
+      "requiredSkills": [
+        {
+          "code": "WATER.PIPE_REPAIR",
+          "minimumLevel": 3
+        }
+      ],
+      "requiredCertifications": [
+        "SAFETY.PPE",
+        "WATER.PIPE_ASSESSMENT"
+      ],
+      "ppe": [
+        "Safety boots",
+        "High visibility vest",
+        "Gloves",
+        "Eye protection"
+      ],
+      "procedureSteps": [
+        "Assess and cordon the scene",
+        "Confirm and isolate the affected main",
+        "Repair under approved isolation",
+        "Inspect and document safe restoration"
+      ],
+      "slaTargetMinutes": 240
+    },
+    {
+      "code": "ELEC.STREETLIGHT_FAULT",
+      "serviceCode": "ELECTRICITY",
+      "category": "Electricity",
+      "department": "Electricity",
+      "title": "Streetlight fault",
+      "description": "Failed or intermittent municipal street lighting.",
+      "hazardClass": "moderate",
+      "requiredSkills": [
+        {
+          "code": "ELEC.FAULT_ISOLATION",
+          "minimumLevel": 3
+        }
+      ],
+      "requiredCertifications": [
+        "SAFETY.PPE",
+        "ELEC.AUTHORISED_PERSON"
+      ],
+      "ppe": [
+        "Safety boots",
+        "Arc rated clothing",
+        "Insulated gloves",
+        "Eye protection"
+      ],
+      "procedureSteps": [
+        "Protect the work area",
+        "Authorised person verifies isolation",
+        "Inspect and repair the fault",
+        "Test and record restoration"
+      ],
+      "slaTargetMinutes": 1440
+    },
+    {
+      "code": "ELEC.LIVE_WIRE_DOWN",
+      "serviceCode": "ELECTRICITY",
+      "category": "Electricity",
+      "department": "Electricity",
+      "title": "Live wire down",
+      "description": "Downed or exposed conductor: keep the public away and escalate urgently.",
+      "hazardClass": "critical",
+      "requiredSkills": [
+        {
+          "code": "ELEC.LIVE_WIRE_SAFETY",
+          "minimumLevel": 4
+        },
+        {
+          "code": "ELEC.FAULT_ISOLATION",
+          "minimumLevel": 3
+        }
+      ],
+      "requiredCertifications": [
+        "SAFETY.PPE",
+        "ELEC.AUTHORISED_PERSON"
+      ],
+      "ppe": [
+        "Arc rated clothing",
+        "Insulated gloves",
+        "Electrical safety boots",
+        "Face shield"
+      ],
+      "procedureSteps": [
+        "Keep clear and cordon a safe perimeter",
+        "Request authorised electrical isolation",
+        "Verify dead under approved procedure",
+        "Recover conductor and record safe restoration"
+      ],
+      "slaTargetMinutes": 60
+    },
+    {
+      "code": "ROADS.POTHOLE_REPAIR",
+      "serviceCode": "ROADS",
+      "category": "Roads",
+      "department": "Roads and Stormwater",
+      "title": "Pothole repair",
+      "description": "Damaged municipal road surface requiring protected repair.",
+      "hazardClass": "moderate",
+      "requiredSkills": [
+        {
+          "code": "ROADS.SURFACE_REPAIR",
+          "minimumLevel": 3
+        },
+        {
+          "code": "ROADS.TRAFFIC_CONTROL",
+          "minimumLevel": 2
+        }
+      ],
+      "requiredCertifications": [
+        "SAFETY.PPE",
+        "ROADS.TRAFFIC_ASSESSMENT"
+      ],
+      "ppe": [
+        "High visibility vest",
+        "Safety boots",
+        "Gloves",
+        "Eye protection"
+      ],
+      "procedureSteps": [
+        "Assess traffic and surface damage",
+        "Install approved traffic protection",
+        "Prepare and repair the surface",
+        "Inspect repair and remove traffic protection"
+      ],
+      "slaTargetMinutes": 1440
+    },
+    {
+      "code": "ROADS.TRAFFIC_SIGNAL_FAULT",
+      "serviceCode": "ROADS",
+      "category": "Roads",
+      "department": "Roads and Stormwater",
+      "title": "Traffic signal fault",
+      "description": "Traffic signal failure requiring traffic protection and specialist review.",
+      "hazardClass": "high",
+      "requiredSkills": [
+        {
+          "code": "ROADS.TRAFFIC_CONTROL",
+          "minimumLevel": 3
+        },
+        {
+          "code": "ELEC.FAULT_ISOLATION",
+          "minimumLevel": 3
+        }
+      ],
+      "requiredCertifications": [
+        "SAFETY.PPE",
+        "ROADS.TRAFFIC_ASSESSMENT",
+        "ELEC.AUTHORISED_PERSON"
+      ],
+      "ppe": [
+        "High visibility vest",
+        "Arc rated clothing",
+        "Safety boots",
+        "Eye protection"
+      ],
+      "procedureSteps": [
+        "Protect traffic and report collision risk",
+        "Obtain authorised signal isolation",
+        "Inspect and repair signal controller",
+        "Test sequence and safely restore traffic"
+      ],
+      "slaTargetMinutes": 240
+    },
+    {
+      "code": "ROADS.BLOCKED_DRAIN",
+      "serviceCode": "ROADS",
+      "category": "Roads",
+      "department": "Roads and Stormwater",
+      "title": "Blocked stormwater drain",
+      "description": "Stormwater drainage blockage requiring surface clearance; confined space entry excluded.",
+      "hazardClass": "high",
+      "requiredSkills": [
+        {
+          "code": "ROADS.DRAIN_CLEARANCE",
+          "minimumLevel": 3
+        },
+        {
+          "code": "ROADS.TRAFFIC_CONTROL",
+          "minimumLevel": 2
+        }
+      ],
+      "requiredCertifications": [
+        "SAFETY.PPE",
+        "ROADS.TRAFFIC_ASSESSMENT"
+      ],
+      "ppe": [
+        "Waterproof gloves",
+        "Safety boots",
+        "High visibility vest",
+        "Eye protection"
+      ],
+      "procedureSteps": [
+        "Assess water and traffic hazards",
+        "Protect the work area",
+        "Clear from surface without confined space entry",
+        "Verify drainage and record waste disposal"
+      ],
+      "slaTargetMinutes": 240
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "civicops.field.step-log.v1",
+  "title": "On-site assist field step log entry (hash-chained, structured outcomes only)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "seq", "workOrderRef", "workOrderTypeCode", "workerId", "step", "prevHash", "hash"],
+  "properties": {
+    "schema": { "const": "civicops.field.step-log.v1" },
+    "seq": { "type": "integer", "minimum": 0 },
+    "workOrderRef": { "type": "string", "pattern": "^CIV-\\d{4}-\\d{5}$" },
+    "workOrderTypeCode": { "type": "string", "pattern": "^[A-Z][A-Z0-9_-]{1,39}$" },
+    "workerId": { "type": "string", "pattern": "^wk-[0-9a-f]{8}$", "description": "Pseudonymous per-device id" },
+    "step": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema", "option", "step", "outcome", "hazards", "decision", "atMs"],
+      "properties": {
+        "schema": { "const": "civicops.assist.step.v1" },
+        "option": { "enum": ["object-hazards", "utility-isolation", "scene-safety"] },
+        "step": { "enum": ["assess-hazards", "check-isolation", "protect-scene", "request-human-review", "confirm-readiness"] },
+        "outcome": { "enum": ["confirmed", "needs-review", "stopped"] },
+        "hazards": { "type": "array", "maxItems": 8, "items": { "enum": ["lane-exposure", "open-excavation", "flooding", "fire", "smoke", "live-asset", "unstable-vehicle", "blocked-access"] } },
+        "decision": { "enum": ["human-confirmed", "human-review-required"] },
+        "atMs": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "prevHash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+  },
+  "x-proposed-endpoint": "POST /api/v1/field/step-logs (proposal only; not implemented in CivicOps)"
+}

@@ -1,0 +1,193 @@
+{
+  "version": "iwsdk.scene.v1",
+  "units": "meters",
+  "player": {
+    "transform": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationDeg": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "components": {
+    "com.iwsdk.components.IBLTexture": {
+      "src": "./textures/workshop-ibl.hdr",
+      "intensity": 0.6,
+      "rotation": [
+        0,
+        0.45,
+        0
+      ]
+    }
+  },
+  "resources": {},
+  "nodes": [
+    {
+      "id": "department-rig",
+      "name": "department-rig",
+      "content": {
+        "type": "group"
+      },
+      "components": {
+        "ModuleBoard": {},
+        "TrainingSession": {
+          "step": "department-board"
+        }
+      },
+      "children": [
+        {
+          "id": "workbench",
+          "name": "workbench",
+          "content": {
+            "type": "asset",
+            "asset": "workbench",
+            "castShadow": false,
+            "receiveShadow": false
+          },
+          "transform": {
+            "position": [
+              0,
+              0,
+              -0.26
+            ]
+          },
+          "components": {}
+        },
+        {
+          "id": "department-board-panel",
+          "name": "department-board-panel",
+          "content": {
+            "type": "asset",
+            "asset": "department-board-ui"
+          },
+          "transform": {
+            "position": [
+              0,
+              1.13,
+              -0.84
+            ],
+            "rotationDeg": [
+              -17,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          }
+        },
+        {
+          "id": "department-icons",
+          "name": "department-icons",
+          "content": {
+            "type": "asset",
+            "asset": "department-icons"
+          },
+          "transform": {
+            "position": [
+              0,
+              1.13,
+              -0.838
+            ],
+            "rotationDeg": [
+              -17,
+              0,
+              0
+            ]
+          },
+          "components": {}
+        }
+      ]
+    },
+    {
+      "id": "workshop-room",
+      "name": "workshop-room",
+      "content": {
+        "type": "asset",
+        "asset": "workshop-room",
+        "castShadow": false,
+        "receiveShadow": false
+      },
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ]
+      },
+      "components": {
+        "LocomotionEnvironment": {}
+      }
+    },
+    {
+      "id": "daylight-key",
+      "transform": {
+        "position": [
+          -2,
+          3,
+          1
+        ],
+        "rotationDeg": [
+          -42,
+          -28,
+          0
+        ]
+      },
+      "components": {
+        "com.iwsdk.components.DirectionalLight": {
+          "color": [
+            1,
+            0.94,
+            0.85,
+            1
+          ],
+          "intensity": 1.45,
+          "castShadow": false
+        }
+      }
+    }
+  ],
+  "authoring": {
+    "views": [
+      {
+        "id": "hero",
+        "role": "hero",
+        "projection": "perspective",
+        "position": [
+          0.05,
+          1.43,
+          1.1
+        ],
+        "target": [
+          0,
+          1.15,
+          -0.5
+        ],
+        "fov": 64
+      },
+      {
+        "id": "seated",
+        "role": "diagnostic",
+        "projection": "perspective",
+        "position": [
+          0,
+          1.45,
+          0.18
+        ],
+        "target": [
+          0,
+          1.05,
+          -0.5
+        ],
+        "fov": 85
+      }
+    ]
+  }
+}

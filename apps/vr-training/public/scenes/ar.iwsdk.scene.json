@@ -1,0 +1,39 @@
+{
+  "version": "iwsdk.scene.v1",
+  "units": "meters",
+  "player": {
+    "transform": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationDeg": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "components": {
+    "com.iwsdk.components.IBLTexture": {
+      "src": "./textures/workshop-ibl.hdr",
+      "intensity": 0.9
+    }
+  },
+  "resources": {},
+  "nodes": [
+    {
+      "id": "ar-session",
+      "name": "ar-session",
+      "content": {
+        "type": "group"
+      },
+      "components": {
+        "TrainingSession": {
+          "step": "room-placement"
+        }
+      }
+    }
+  ]
+}

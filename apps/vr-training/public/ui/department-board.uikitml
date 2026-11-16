@@ -1,0 +1,76 @@
+<style>
+ .board-stage { flex-direction: column; gap: 1.2; }
+ .programme { display: none; flex-direction: column; width: 61; gap: 1.4; }
+ .programme-context { font-size: 2.7; line-height: 1.15; color: #ffffff; height: 10; }
+ .programme-prompt { font-size: 3.2; font-weight: 700; line-height: 1.12; color: #f7d58b; height: 8; }
+ .programme-choice { width: 61; height: 7; justify-content: center; align-items: center; background-color: #eff6f3; color: #102a34; border-radius: 0.8; font-size: 2.7; cursor: pointer; }
+ .programme-feedback { font-size: 2.7; line-height: 1.12; height: 13; color: #ffffff; }
+ .board { flex-direction: column; width: 96; height: 63; padding-left: 2.5; padding-right: 2.5; padding-top: 2; padding-bottom: 2; gap: 1.2; background-color: #102d36; border-color: #86b8b5; border-width: 0.12; border-radius: 1.5; color: #ffffff; }
+ .row { flex-direction: row; justify-content: space-between; align-items: center; gap: 1; }
+ .brand { font-size: 2.7; font-weight: 700; color: #f7d58b; }
+ .title { font-size: 4.3; font-weight: 700; line-height: 1.1; }
+ .tabs { flex-direction: row; gap: 1; height: 6; }
+ .tab { width: 22; height: 6; padding-left: 4.3; justify-content: center; background-color: #28434c; color: #ffffff; border-radius: 0.7; font-size: 2.7; font-weight: 700; cursor: pointer; }
+ .future { height: 5; padding-left: 4.2; padding-right: 1.1; justify-content: center; background-color: #28434c; color: #ffffff; border-radius: 0.7; font-size: 2.7; cursor: pointer; }
+ .job { flex-direction: column; width: 91; height: 32; gap: 1; padding-left: 2; padding-right: 2; padding-top: 1.5; padding-bottom: 1.5; border-radius: 1; background-color: #eff6f3; color: #102a34; }
+ .ref { font-size: 2.7; color: #254953; }
+ .job-title { font-size: 4.3; font-weight: 700; color: #102a34; line-height: 1.1; }
+ .copy { font-size: 2.8; color: #102a34; line-height: 1.12; }
+ .hazards { flex-direction: row; height: 4; gap: 1; }
+ .hazard-chip { flex-direction: row; width: 28; height: 4; align-items: center; gap: 0.6; background-color: #e4ce95; border-radius: 0.5; padding-left: 0.6; }
+ .hazard-mark { width: 3; height: 4; }
+ .hazard-text { color: #352704; font-size: 2.8; line-height: 1.05; }
+ .action { width: 37; height: 6; align-items: center; justify-content: center; background-color: #113f3d; color: #ffffff; font-size: 3; font-weight: 700; border-radius: 0.7; cursor: pointer; }
+ .more { width: 26; height: 6; align-items: center; justify-content: center; background-color: #d5e3e0; color: #102a34; font-size: 2.8; border-radius: 0.7; cursor: pointer; }
+ .note { font-size: 2.7; color: #ffffff; line-height: 1.15; }
+ .mode { height: 3.6; padding-left: 1.2; padding-right: 1.2; justify-content: center; align-items: center; background-color: #28434c; color: #ffffff; border-color: #f7d58b; border-width: 0.1; border-radius: 0.6; font-size: 2.7; font-weight: 700; cursor: pointer; }
+</style>
+<div id="panel-root" class="board">
+ <div id="board-content" class="board-stage">
+ <div id="brand-row" class="row"><div id="department-readiness" class="brand">4 READY / ELEC + WATER + ROADS + FIRE</div><button id="guidance-toggle" class="mode">Guided practice</button></div>
+ <div id="title-row" class="row"><div class="title">Your department. Your next call.</div><button id="dwell-toggle" class="mode">Dwell: off</button></div>
+ <div id="department-tabs" class="tabs">
+  <button id="tab-electricity" class="tab">Electricity</button><button id="tab-water" class="tab">Water</button><button id="tab-roads" class="tab">Roads</button><button id="tab-fire" class="tab">Fire &amp; EMS</button>
+ </div>
+ <div id="future-tabs" class="row">
+  <button id="tab-assist" class="future">On-site assist (AR)</button><button id="tab-metro" class="future">Metro / next</button><button id="tab-disaster" class="future">Disaster / next</button>
+ </div>
+ <div id="job-card" class="job">
+  <div id="job-reference" class="ref">DEMO / WATER-005 / WATER.BURST_MAIN</div>
+  <div id="job-title" class="job-title">Burst main isolation</div>
+  <div id="job-hazards" class="hazards">
+   <div id="hazard-chip-1" class="hazard-chip"><div id="hazard-mark-1" class="hazard-mark"></div><div id="hazard-text-1" class="hazard-text">Flooding</div></div>
+   <div id="hazard-chip-2" class="hazard-chip"><div id="hazard-mark-2" class="hazard-mark"></div><div id="hazard-text-2" class="hazard-text">Open excavation</div></div>
+   <div id="hazard-chip-3" class="hazard-chip"><div id="hazard-mark-3" class="hazard-mark"></div><div id="hazard-text-3" class="hazard-text">Pressure</div></div>
+  </div>
+  <div id="job-cert" class="copy">Required: Water isolation / Your cert: not yet earned</div>
+  <div id="job-expiry" class="copy">Expiry: after passing / 7 checks / Original field equipment</div>
+  <div id="job-actions" class="row"><button id="open-module" class="action">Start Water training</button><button id="next-job" class="more">Next work order</button><button id="asset-credits-open" class="more">Asset credits</button></div>
+ </div>
+ <div id="board-note" class="note">Illustrative training. Follow your employer's SOPs.
+Object guidance only. You decide every action.</div>
+ </div>
+ <div id="asset-credits-panel" class="board-stage" style="display: none;">
+  <div class="title">Built with credited assets</div>
+  <div class="job" style="height: 50; gap: 2;">
+   <div class="job-title">Minibus base / Alvin.Woodly</div>
+   <div class="copy">CC BY 4.0 / Sketchfab. Modified grille, removed badges, original finish, roof rack, taxi board, service-van finish, reduced geometry.</div>
+   <div class="job-title">Animated crew / Quaternius</div>
+   <div class="copy">CC0 worker / Quaternius. Cone: Sabri Ayes, CC BY 4.0. Source links, terms and changes: credits.html</div>
+   <div class="job-title">Scanned surfaces and skies / Poly Haven</div>
+   <div class="copy">CC0 / Poly Haven surfaces, skies, Utility Box 02 (James Ray Cock), Empty Workshop (Sergej Majboroda). Resized and compressed.</div>
+   <div class="copy">Illustrative training only, not live-site capture. Desktop hand practice uses the IWER Quest 3 emulator. Full source links: credits.html</div>
+  </div>
+  <button id="asset-credits-close" class="more">Back to jobs</button>
+ </div>
+ <div id="programme-content" class="programme">
+  <div id="programme-progress" class="brand">PRE-SHIFT / BRIEFING</div>
+  <div id="programme-title" class="title">Your next call</div>
+  <div id="programme-context" class="programme-context">Read the site brief.</div>
+  <div id="programme-prompt" class="programme-prompt">Check before entering the site.</div>
+  <button id="programme-choice-0" class="programme-choice">Check the safe approach</button>
+  <button id="programme-choice-1" class="programme-choice">Review the site hazards</button>
+  <div id="programme-feedback" class="programme-feedback">Illustrative training. Follow your employer's SOPs.</div>
+  <button id="programme-cancel" class="more">Back to work orders</button>
+ </div>
+</div>

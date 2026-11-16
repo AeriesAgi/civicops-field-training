@@ -1,0 +1,333 @@
+{
+  "version": "iwsdk.scene.v1",
+  "units": "meters",
+  "player": {
+    "transform": {
+      "position": [
+        0,
+        0,
+        8
+      ],
+      "rotationDeg": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "components": {
+    "com.iwsdk.components.IBLTexture": {
+      "src": "./textures/street-sky.hdr",
+      "intensity": 0.8,
+      "rotation": [
+        0,
+        0.45,
+        0
+      ]
+    },
+    "com.iwsdk.components.DomeTexture": {
+      "src": "./textures/street-sky.hdr",
+      "intensity": 0.9,
+      "rotation": [
+        0,
+        0.45,
+        0
+      ]
+    }
+  },
+  "resources": {},
+  "nodes": [
+    {
+      "id": "water-session",
+      "name": "water-session",
+      "content": {
+        "type": "group"
+      },
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ]
+      },
+      "components": {
+        "WaterSession": {},
+        "TrainingSession": {
+          "step": "make-area-safe"
+        }
+      },
+      "children": [
+        {
+          "id": "water-road",
+          "name": "water-road",
+          "content": {
+            "type": "asset",
+            "asset": "water-road"
+          },
+          "transform": {
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "LocomotionEnvironment": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "water-key",
+          "name": "water-key",
+          "content": {
+            "type": "asset",
+            "asset": "water-valve-key"
+          },
+          "transform": {
+            "position": [
+              -1.8,
+              0.06,
+              2.3
+            ]
+          },
+          "components": {
+            "WaterTarget": {
+              "kind": "key"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "water-barrier-kit",
+          "name": "water-barrier-kit",
+          "content": {
+            "type": "asset",
+            "asset": "water-barrier"
+          },
+          "transform": {
+            "position": [
+              -0.8,
+              0.02,
+              1.35
+            ]
+          },
+          "components": {
+            "WaterTarget": {
+              "kind": "barrier",
+              "action": "place-barriers"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "water-sign",
+          "name": "water-sign",
+          "content": {
+            "type": "asset",
+            "asset": "water-sign"
+          },
+          "transform": {
+            "position": [
+              0.8,
+              0.02,
+              1.35
+            ]
+          },
+          "components": {
+            "WaterTarget": {
+              "kind": "sign",
+              "action": "place-sign"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "street-actors",
+          "name": "street-actors",
+          "content": {
+            "type": "asset",
+            "asset": "street-actors",
+            "castShadow": false,
+            "receiveShadow": false
+          },
+          "transform": {
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "water-steps-panel",
+      "name": "water-steps-panel",
+      "content": {
+        "type": "asset",
+        "asset": "water-steps-ui"
+      },
+      "transform": {
+        "position": [
+          -1.1,
+          2.05,
+          6.35
+        ],
+        "rotationDeg": [
+          -8,
+          0,
+          0
+        ]
+      },
+      "components": {
+        "RayInteractable": {},
+        "PokeInteractable": {}
+      },
+      "visible": true
+    },
+    {
+      "id": "water-controls-panel",
+      "name": "water-controls-panel",
+      "content": {
+        "type": "asset",
+        "asset": "water-controls-ui"
+      },
+      "transform": {
+        "position": [
+          1.1,
+          2.05,
+          6.35
+        ],
+        "rotationDeg": [
+          -8,
+          0,
+          0
+        ]
+      },
+      "components": {
+        "RayInteractable": {},
+        "PokeInteractable": {}
+      },
+      "visible": true
+    },
+    {
+      "id": "water-network-panel",
+      "name": "water-network-panel",
+      "content": {
+        "type": "asset",
+        "asset": "water-network-ui"
+      },
+      "transform": {
+        "position": [
+          0,
+          2.05,
+          6.25
+        ],
+        "rotationDeg": [
+          -8,
+          0,
+          0
+        ]
+      },
+      "components": {
+        "RayInteractable": {},
+        "PokeInteractable": {}
+      },
+      "visible": false
+    },
+    {
+      "id": "water-results-panel",
+      "name": "water-results-panel",
+      "content": {
+        "type": "asset",
+        "asset": "results-ui"
+      },
+      "transform": {
+        "position": [
+          0,
+          2.1,
+          6.25
+        ],
+        "rotationDeg": [
+          -8,
+          0,
+          0
+        ]
+      },
+      "components": {
+        "RayInteractable": {},
+        "PokeInteractable": {}
+      },
+      "visible": false
+    },
+    {
+      "id": "daylight-key",
+      "transform": {
+        "position": [
+          -2,
+          3,
+          1
+        ],
+        "rotationDeg": [
+          -42,
+          -28,
+          0
+        ]
+      },
+      "components": {
+        "com.iwsdk.components.DirectionalLight": {
+          "color": [
+            1,
+            0.94,
+            0.83,
+            1
+          ],
+          "intensity": 1.55,
+          "castShadow": false
+        }
+      }
+    }
+  ],
+  "authoring": {
+    "views": [
+      {
+        "id": "hero",
+        "role": "hero",
+        "projection": "perspective",
+        "position": [
+          0.2,
+          1.6,
+          5.2
+        ],
+        "target": [
+          0.2,
+          0.7,
+          0.4
+        ],
+        "fov": 68
+      },
+      {
+        "id": "seated",
+        "role": "diagnostic",
+        "projection": "perspective",
+        "position": [
+          0,
+          1.6,
+          8
+        ],
+        "target": [
+          0,
+          0.8,
+          0
+        ],
+        "fov": 85
+      }
+    ]
+  }
+}

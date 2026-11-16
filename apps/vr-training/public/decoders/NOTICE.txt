@@ -1,0 +1,11 @@
+Basis Universal KTX2 transcoder (basis/basis_transcoder.js and .wasm)
+Copyright (c) Binomial LLC. Apache License 2.0.
+Upstream: https://github.com/BinomialLLC/basis_universal
+Vendored from super-three@0.181.0 examples/jsm/libs/basis.
+
+Google Draco WebAssembly decoder (draco/draco_wasm_wrapper.js and .wasm)
+Copyright (c) Google Inc. Apache License 2.0.
+Upstream: https://github.com/google/draco
+Vendored from super-three@0.181.0 examples/jsm/libs/draco/gltf.
+
+These are software dependencies. Artistic asset licences (CC0 and CC BY 4.0) are listed in credits.html and ASSETS.md.

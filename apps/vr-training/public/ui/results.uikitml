@@ -1,0 +1,84 @@
+<style>
+  .results-card { flex-direction: column; width: 64; height: 63; background-color: #173d38; border-color: #a5bfa9; border-width: 0.1; border-radius: 1.4; padding-top: 2; padding-bottom: 2; padding-left: 2.2; padding-right: 2.2; gap: 0.7; color: #ffffff; }
+  .results-eyebrow { font-size: 2.1; font-weight: 700; color: #f5d78c; }
+  .results-hero { flex-direction: row; height: 9; justify-content: space-between; align-items: center; }
+  .results-title { font-size: 5.4; font-weight: 700; color: #ffffff; }
+  .results-score { font-size: 6.5; font-weight: 700; color: #ffffff; }
+  .results-time { font-size: 2.1; color: #ffffff; }
+  .results-row { flex-direction: row; justify-content: space-between; gap: 0.7; }
+  .results-stat { width: 19.3; height: 6.2; flex-direction: column; justify-content: center; align-items: center; background-color: #0d2c26; border-radius: 0.65; gap: 0.3; }
+  .results-value { font-size: 2.8; font-weight: 700; color: #ffffff; }
+  .results-label { font-size: 2.1; font-weight: 700; color: #ffffff; }
+  .results-checks { flex-direction: row; justify-content: space-between; gap: 0.5; }
+  .results-step { width: 6.1; height: 5.2; justify-content: center; align-items: center; text-align: center; font-size: 2.1; font-weight: 700; line-height: 1.15; background-color: #f7f3e9; color: #173d38; border-radius: 0.65; }
+  .results-certification { font-size: 2.1; font-weight: 700; color: #ffffff; }
+  .results-medal { width: 19.3; height: 3.6; justify-content: center; align-items: center; background-color: #0d2c26; color: #ffffff; border-color: #7c9988; border-width: 0.06; border-radius: 0.6; font-size: 2.1; font-weight: 700; }
+  .results-next { font-size: 2.1; line-height: 1.15; color: #ffffff; }
+  .results-button { width: 19.3; height: 6.4; justify-content: center; align-items: center; background-color: #f5d78c; color: #173d38; font-size: 2.3; font-weight: 700; border-radius: 0.8; cursor: pointer; }
+  .results-secondary { background-color: #f7f3e9; color: #173d38; }
+  .results-hidden { display: none; }
+</style>
+<div id="result-body" class="results-card">
+  <div id="result-eyebrow" class="results-eyebrow">CIVICOPS / ISOLATION COMPLETE</div>
+  <div class="results-hero">
+    <div id="result-title" class="results-title">PASS</div>
+    <div id="score" class="results-score">100</div>
+  </div>
+  <div id="result-time" class="results-time">TIME 00:00 / SAFETY SCORE OUT OF 100</div>
+  <div id="result-safety-note" class="results-next" style="display: none; font-size: 2.4; line-height: 1.18;">Use the tester before touching terminals.</div>
+  <div class="results-row">
+    <div class="results-stat"><div id="result-hints" class="results-value">0</div><div class="results-label">HINTS</div></div>
+    <div class="results-stat"><div id="result-errors" class="results-value">0</div><div class="results-label">ERRORS</div></div>
+    <div class="results-stat"><div id="result-critical" class="results-value">5 / 5</div><div class="results-label">CRITICAL CHECKS</div></div>
+  </div>
+  <div class="results-eyebrow" id="result-checks-title">YOUR NINE SAFETY CHECKS</div>
+  <div id="breakdown" class="results-checks">
+    <div id="result-step-1" class="results-step">+
+1</div>
+    <div id="result-step-2" class="results-step">+
+2</div>
+    <div id="result-step-3" class="results-step">+
+3</div>
+    <div id="result-step-4" class="results-step">+
+4</div>
+    <div id="result-step-5" class="results-step">+
+5</div>
+    <div id="result-step-6" class="results-step">+
+6</div>
+    <div id="result-step-7" class="results-step">+
+7</div>
+    <div id="result-step-8" class="results-step">+
+8</div>
+    <div id="result-step-9" class="results-step">+
+9</div>
+    <div id="result-step-10" class="results-step">+
+10</div>
+    <div id="result-step-11" class="results-step">+
+11</div>
+    <div id="result-step-12" class="results-step">+
+12</div>
+    <div id="result-step-13" class="results-step">+
+13</div>
+  </div>
+  <div id="programme-debrief" style="display: none; flex-direction: column; gap: 0.7; height: 12;">
+    <div id="competency-summary" class="results-next">Safety gates / Procedure accuracy</div>
+    <div id="debrief-feedback" class="results-next">Explain the safe handover to your supervisor.</div>
+    <div id="pace-feedback" class="results-next">Pace is reviewed after safety and accuracy.</div>
+  </div>
+  <div id="certification" class="results-certification">CERTIFICATION / BRONZE</div>
+  <div class="results-row">
+    <div id="cert-bronze" class="results-medal">ASSISTANT</div>
+    <div id="cert-silver" class="results-medal">OPERATOR</div>
+    <div id="cert-gold" class="results-medal">SUPERVISOR</div>
+  </div>
+  <div id="cert-next-goal" class="results-next">NEXT / Pass three attempts to earn Operator.</div>
+  <div id="return-streak" class="results-next">STREAK / 0 days</div>
+  <div id="refresher-due" class="results-next">REFRESHER / After your first pass</div>
+  <div id="daily-status" class="results-next">TODAY / Daily drill ready</div>
+  <div id="sync-status" class="results-hidden">Results stay on this device.</div>
+  <div id="results-actions" class="results-row">
+    <button id="try-again" class="results-button">Try again</button>
+    <button id="daily-drill" class="results-button">Daily drill</button>
+    <button id="back-to-jobs" class="results-button results-secondary">Back to jobs</button>
+  </div>
+</div>

@@ -1,0 +1,4 @@
+<style>
+  .settingstoggle-button { width: 15; height: 5.8; justify-content: center; align-items: center; background-color: #173d38; border-color: #a5bfa9; border-width: 0.08; border-radius: 0.8; color: #ffffff; font-size: 2.3; font-weight: 700; cursor: pointer; }
+</style>
+<button id="open-settings" class="settingstoggle-button">Settings +</button>

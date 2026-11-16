@@ -1,0 +1,19 @@
+<style>
+  .jobs-card { flex-direction: column; width: 54; height: 34; background-color: #173d38; border-color: #a5bfa9; border-width: 0.1; border-radius: 1.4; padding-top: 2; padding-bottom: 2; padding-left: 2.3; padding-right: 2.3; gap: 1.1; color: #ffffff; }
+  .jobs-eyebrow { font-size: 2.1; font-weight: 700; color: #f5d78c; }
+  .jobs-title { font-size: 3.7; font-weight: 700; line-height: 1.12; color: #ffffff; }
+  .jobs-text { font-size: 2.3; color: #ffffff; }
+  .jobs-note { font-size: 2.1; line-height: 1.18; color: #ffffff; }
+  .jobs-button { height: 6.5; justify-content: center; align-items: center; background-color: #f5d78c; color: #173d38; border-radius: 0.8; font-size: 2.6; font-weight: 700; cursor: pointer; }
+</style>
+<div id="panel-root" class="jobs-card">
+  <div class="jobs-eyebrow">CIVICOPS / FIELD TRAINING</div>
+  <div class="jobs-title">Electrical isolation</div>
+  <div class="jobs-text">Streetlight feeder / SL-3</div>
+  <div class="jobs-note">9 checks / Hands only / Seated</div>
+  <div class="jobs-note">Illustrative municipal training.
+Follow your employer SOPs.</div>
+  <div id="jobs-actions">
+    <button id="start-module" class="jobs-button">Start training</button>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<style>
+  .workorder-card { flex-direction: column; width: 34; height: 29; background-color: #f7f3e9; border-color: #d5ddcf; border-width: 0.08; border-radius: 1.1; padding-top: 1.5; padding-bottom: 1.5; padding-left: 1.7; padding-right: 1.7; gap: 0.8; color: #173d38; }
+  .workorder-header { flex-direction: row; justify-content: space-between; align-items: center; height: 3.4; gap: 0.4; }
+  .workorder-jobs { width: 7; height: 3.4; justify-content: center; align-items: center; background-color: #173d38; color: #ffffff; border-radius: 0.55; font-size: 2.7; font-weight: 700; cursor: pointer; }
+  .workorder-eyebrow { height: 3.4; line-height: 1.1; font-size: 2.7; font-weight: 700; color: #173d38; }
+  .workorder-reference { height: 3.4; line-height: 1.1; font-size: 2.7; font-weight: 700; color: #173d38; }
+  .workorder-text { height: 3.4; font-size: 2.7; font-weight: 700; line-height: 1.18; color: #173d38; }
+  .workorder-circuit-row { flex-direction: row; align-items: center; justify-content: space-between; height: 7; }
+  .workorder-circuit { font-size: 5.5; font-weight: 700; color: #173d38; }
+  .workorder-bay { font-size: 2.7; font-weight: 700; color: #173d38; }
+  .workorder-chip { height: 4.5; justify-content: center; align-items: center; border-radius: 0.55; background-color: #f5d78c; color: #173d38; font-size: 2.7; font-weight: 700; }
+  .workorder-button { display: none; height: 4.8; justify-content: center; align-items: center; background-color: #173d38; color: #ffffff; border-radius: 0.55; font-size: 2.7; font-weight: 700; cursor: pointer; }
+  .workorder-meter { display: none; font-size: 2.7; color: #173d38; }
+</style>
+<div id="panel-root" class="workorder-card">
+  <div class="workorder-header"><div class="workorder-eyebrow">WORK ORDER</div><button id="back-to-jobs" class="workorder-jobs">Jobs</button></div>
+  <div id="job-reference" class="workorder-reference">JOB / DEMO0001</div>
+  <div class="workorder-text">Streetlight flicker</div>
+  <div class="workorder-circuit-row">
+    <div id="schematic" class="workorder-circuit">SL-3</div>
+    <div class="workorder-bay">BAY 03</div>
+  </div>
+  <div id="work-order-status" class="workorder-chip">CHECK CIRCUIT</div>
+  <button id="check-schematic" class="workorder-button">Check circuit reference</button>
+  <div id="voltage" class="workorder-meter">Tester not proved</div>
+</div>

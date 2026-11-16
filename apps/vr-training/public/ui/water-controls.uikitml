@@ -1,0 +1,59 @@
+<style>
+  .water-controls { flex-direction: column; width: 32; height: 32; background-color: #f7f3e9; color: #103d50; border-color: #bad3d8; border-width: 0.08; border-radius: 1; padding-top: 1.1; padding-bottom: 1.1; padding-left: 1.4; padding-right: 1.4; gap: 0.6; }
+  .water-control-title { font-size: 3.7; font-weight: 700; line-height: 1.1; height: 5.4; flex-shrink: 0; }
+  .water-gauge { flex-direction: row; justify-content: space-between; height: 4.8; flex-shrink: 0; align-items: center; background-color: #103d50; border-radius: 0.5; padding-left: 0.8; padding-right: 0.8; }
+  .water-reading { height: 3.6; flex-shrink: 0; font-size: 2.7; font-weight: 700; line-height: 1.1; color: #ffffff; }
+  .water-pressure { width: 11.4; }
+  .water-flow { width: 16; text-align: right; }
+  .water-action-group { flex-direction: column; gap: 0.6; flex-shrink: 0; }
+  .water-action { height: 5.4; flex-shrink: 0; justify-content: center; align-items: center; background-color: #103d50; color: #ffffff; border-radius: 0.6; font-size: 2.7; font-weight: 700; cursor: pointer; }
+  .water-action-small { width: 14; height: 7.2; font-size: 2.7; line-height: 1.1; text-align: center; }
+  .water-action-row { flex-direction: row; justify-content: space-between; gap: 0.6; height: 7.2; flex-shrink: 0; }
+  .water-action-safe { background-color: #174d2c; }
+  .water-copy { height: 10; flex-shrink: 0; font-size: 2.7; line-height: 1.15; }
+  .water-turns { font-size: 3.7; font-weight: 700; line-height: 1.1; }
+  .water-turn-meter { flex-direction: row; align-items: center; gap: 1; height: 10; flex-shrink: 0; }
+  .water-turn-dial { width: 5.5; height: 5.5; flex-shrink: 0; justify-content: center; align-items: center; border-radius: 2.75; border-width: 0.25; border-color: #103d50; background-color: #c8e9ed; color: #103d50; font-size: 3.7; font-weight: 700; }
+  .water-turn-count { width: 22.4; height: 9.5; flex-shrink: 0; justify-content: center; font-size: 2.7; font-weight: 700; line-height: 1.1; }
+  .water-turn-guide { height: 7; }
+  .water-progress { flex-direction: row; justify-content: space-between; gap: 0.5; height: 3; flex-shrink: 0; }
+  .water-turn-mark { width: 9.2; height: 3; background-color: #dce6df; border-radius: 0.4; }
+</style>
+<div id="panel-root" class="water-controls">
+  <div id="action-title" class="water-control-title">AREA SAFETY</div>
+  <div class="water-gauge"><div id="pressure" class="water-reading water-pressure">4.0 bar</div><div id="flow-status" class="water-reading water-flow">FLOWING</div></div>
+  <div id="safety-actions" class="water-action-group">
+    <div class="water-copy">Place barrier + sign.
+Check spoil setback.</div>
+    <button id="set-spoil-back" class="water-action">Spoil set back</button>
+  </div>
+  <div id="notify-actions" class="water-action-group" style="display: none;">
+    <div class="water-copy">Control + customers.
+Simulated CivicOps notice.</div>
+    <button id="notify-control" class="water-action">Notify control</button>
+  </div>
+  <div id="valve-actions" class="water-action-group" style="display: none;">
+    <div class="water-turn-meter"><div id="turn-dial" class="water-turn-dial">0</div><div id="turn-count" class="water-turn-count">KEY / NOT SEATED</div></div>
+    <div class="water-progress"><div id="turn-mark-1" class="water-turn-mark"></div><div id="turn-mark-2" class="water-turn-mark"></div><div id="turn-mark-3" class="water-turn-mark"></div></div>
+    <div id="turn-guide" class="water-copy water-turn-guide">Lift cover. Seat key.
+Roll slowly. Regrip.</div>
+  </div>
+  <div id="isolation-actions" class="water-action-group" style="display: none;">
+    <div class="water-action-row"><button id="open-washout" class="water-action water-action-small">Open
+washout</button><button id="confirm-isolation" class="water-action water-action-small">Confirm
+isolation</button></div>
+  </div>
+  <div id="trench-actions" class="water-action-group" style="display: none;">
+    <div class="water-action-row"><button id="check-shoring" class="water-action water-action-small">Check
+shoring</button><button id="check-ladder" class="water-action water-action-small">Check
+ladder</button></div>
+    <div class="water-action-row"><button id="check-atmosphere" class="water-action water-action-small">Check
+air</button><button id="check-flooding" class="water-action water-action-small">Check
+flooding</button></div>
+    <button id="trench-safety" class="water-action">Confirm checks</button>
+  </div>
+  <div id="repair-actions" class="water-action-group" style="display: none;"><button id="ready-for-repair" class="water-action water-action-safe">Ready for repair</button><div class="water-copy">A human authorises the work.
+Follow your employer's SOPs.</div></div>
+  <div id="plan-actions" class="water-action-group" style="display: none;"><div class="water-copy">Poke the network plan.
+Protect the hospital supply.</div></div>
+</div>

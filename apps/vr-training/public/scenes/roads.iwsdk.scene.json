@@ -1,0 +1,1116 @@
+{
+  "version": "iwsdk.scene.v1",
+  "units": "meters",
+  "player": {
+    "transform": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationDeg": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "components": {
+    "com.iwsdk.components.IBLTexture": {
+      "src": "./textures/storm-sky.hdr",
+      "intensity": 0.8,
+      "rotation": [
+        0,
+        0.45,
+        0
+      ]
+    },
+    "com.iwsdk.components.DomeTexture": {
+      "src": "./textures/storm-sky.hdr",
+      "intensity": 0.9,
+      "rotation": [
+        0,
+        0.45,
+        0
+      ]
+    }
+  },
+  "resources": {},
+  "nodes": [
+    {
+      "id": "roads-session",
+      "name": "roads-session",
+      "content": {
+        "type": "group"
+      },
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "components": {
+        "RoadsSession": {},
+        "TrainingSession": {
+          "step": "park-vehicle"
+        }
+      },
+      "children": [
+        {
+          "id": "roads-street",
+          "name": "roads-street",
+          "content": {
+            "type": "asset",
+            "asset": "roads-street"
+          },
+          "transform": {
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "LocomotionEnvironment": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-cone-1",
+          "name": "roads-cone-1",
+          "content": {
+            "type": "asset",
+            "asset": "roads-cone"
+          },
+          "transform": {
+            "position": [
+              -4.5,
+              0.07,
+              2.75
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "cone",
+              "partId": "cone-1"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-cone-2",
+          "name": "roads-cone-2",
+          "content": {
+            "type": "asset",
+            "asset": "roads-cone"
+          },
+          "transform": {
+            "position": [
+              -3.35,
+              0.07,
+              2.28
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "cone",
+              "partId": "cone-2"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-cone-3",
+          "name": "roads-cone-3",
+          "content": {
+            "type": "asset",
+            "asset": "roads-cone"
+          },
+          "transform": {
+            "position": [
+              -2.2,
+              0.07,
+              1.81
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "cone",
+              "partId": "cone-3"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-cone-4",
+          "name": "roads-cone-4",
+          "content": {
+            "type": "asset",
+            "asset": "roads-cone"
+          },
+          "transform": {
+            "position": [
+              -1.05,
+              0.07,
+              1.34
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "cone",
+              "partId": "cone-4"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-cone-5",
+          "name": "roads-cone-5",
+          "content": {
+            "type": "asset",
+            "asset": "roads-cone"
+          },
+          "transform": {
+            "position": [
+              0.1,
+              0.07,
+              0.87
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "cone",
+              "partId": "cone-5"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-cone-6",
+          "name": "roads-cone-6",
+          "content": {
+            "type": "asset",
+            "asset": "roads-cone"
+          },
+          "transform": {
+            "position": [
+              1.25,
+              0.07,
+              0.4
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "cone",
+              "partId": "cone-6"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-warning",
+          "name": "roads-warning",
+          "content": {
+            "type": "asset",
+            "asset": "roads-warning"
+          },
+          "transform": {
+            "position": [
+              -5.6,
+              0.42,
+              4.65
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "warning",
+              "partId": "warning"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-keep-left",
+          "name": "roads-keep-left",
+          "content": {
+            "type": "asset",
+            "asset": "roads-keep-left"
+          },
+          "transform": {
+            "position": [
+              -4.5,
+              0.42,
+              4.65
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "keep-left",
+              "partId": "keep-left"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-marshal-1",
+          "name": "roads-marshal-1",
+          "content": {
+            "type": "asset",
+            "asset": "roads-marshal"
+          },
+          "transform": {
+            "position": [
+              6.7,
+              0.42,
+              4.65
+            ],
+            "rotationDeg": [
+              0,
+              -90,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "flagger",
+              "partId": "flagger-1"
+            }
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-marshal-2",
+          "name": "roads-marshal-2",
+          "content": {
+            "type": "asset",
+            "asset": "roads-marshal"
+          },
+          "transform": {
+            "position": [
+              23.2,
+              0.47,
+              4.65
+            ],
+            "rotationDeg": [
+              0,
+              90,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "flagger",
+              "partId": "flagger-2"
+            }
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-delineator-1",
+          "name": "roads-delineator-1",
+          "content": {
+            "type": "asset",
+            "asset": "roads-delineator"
+          },
+          "transform": {
+            "position": [
+              26,
+              0.42,
+              4.8
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "delineator",
+              "partId": "delineator-1"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-delineator-2",
+          "name": "roads-delineator-2",
+          "content": {
+            "type": "asset",
+            "asset": "roads-delineator"
+          },
+          "transform": {
+            "position": [
+              30,
+              0.42,
+              4.8
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "delineator",
+              "partId": "delineator-2"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-bakkie",
+          "name": "roads-bakkie",
+          "content": {
+            "type": "asset",
+            "asset": "roads-bakkie"
+          },
+          "transform": {
+            "position": [
+              -10,
+              0.42,
+              4.95
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "vehicle",
+              "partId": "vehicle"
+            }
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-traffic-1",
+          "name": "roads-traffic-1",
+          "transform": {
+            "position": [
+              -20,
+              0,
+              -1.8
+            ]
+          },
+          "components": {},
+          "visible": true
+        },
+        {
+          "id": "roads-traffic-2",
+          "name": "roads-traffic-2",
+          "transform": {
+            "position": [
+              -8,
+              0,
+              -1.8
+            ]
+          },
+          "components": {},
+          "visible": true
+        },
+        {
+          "id": "roads-traffic-3",
+          "name": "roads-traffic-3",
+          "transform": {
+            "position": [
+              5,
+              0,
+              -1.8
+            ]
+          },
+          "components": {},
+          "visible": true
+        },
+        {
+          "id": "roads-barrier-1",
+          "name": "roads-barrier-1",
+          "content": {
+            "type": "asset",
+            "asset": "roads-barrier"
+          },
+          "transform": {
+            "position": [
+              8,
+              0.07,
+              0.35
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "barrier",
+              "partId": "barrier-1"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-barrier-2",
+          "name": "roads-barrier-2",
+          "content": {
+            "type": "asset",
+            "asset": "roads-barrier"
+          },
+          "transform": {
+            "position": [
+              10,
+              0.07,
+              0.35
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "barrier",
+              "partId": "barrier-2"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-barrier-3",
+          "name": "roads-barrier-3",
+          "content": {
+            "type": "asset",
+            "asset": "roads-barrier"
+          },
+          "transform": {
+            "position": [
+              12,
+              0.07,
+              0.35
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "barrier",
+              "partId": "barrier-3"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-barrier-4",
+          "name": "roads-barrier-4",
+          "content": {
+            "type": "asset",
+            "asset": "roads-barrier"
+          },
+          "transform": {
+            "position": [
+              14,
+              0.07,
+              0.35
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "barrier",
+              "partId": "barrier-4"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-barrier-5",
+          "name": "roads-barrier-5",
+          "content": {
+            "type": "asset",
+            "asset": "roads-barrier"
+          },
+          "transform": {
+            "position": [
+              16,
+              0.07,
+              0.35
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "barrier",
+              "partId": "barrier-5"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-barrier-6",
+          "name": "roads-barrier-6",
+          "content": {
+            "type": "asset",
+            "asset": "roads-barrier"
+          },
+          "transform": {
+            "position": [
+              18,
+              0.07,
+              0.35
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "barrier",
+              "partId": "barrier-6"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-barrier-7",
+          "name": "roads-barrier-7",
+          "content": {
+            "type": "asset",
+            "asset": "roads-barrier"
+          },
+          "transform": {
+            "position": [
+              8,
+              0.28,
+              3.65
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "barrier",
+              "partId": "barrier-7"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-barrier-8",
+          "name": "roads-barrier-8",
+          "content": {
+            "type": "asset",
+            "asset": "roads-barrier"
+          },
+          "transform": {
+            "position": [
+              10,
+              0.28,
+              3.65
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "barrier",
+              "partId": "barrier-8"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-barrier-9",
+          "name": "roads-barrier-9",
+          "content": {
+            "type": "asset",
+            "asset": "roads-barrier"
+          },
+          "transform": {
+            "position": [
+              12,
+              0.28,
+              3.65
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "barrier",
+              "partId": "barrier-9"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-barrier-10",
+          "name": "roads-barrier-10",
+          "content": {
+            "type": "asset",
+            "asset": "roads-barrier"
+          },
+          "transform": {
+            "position": [
+              14,
+              0.28,
+              3.65
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "barrier",
+              "partId": "barrier-10"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-barrier-11",
+          "name": "roads-barrier-11",
+          "content": {
+            "type": "asset",
+            "asset": "roads-barrier"
+          },
+          "transform": {
+            "position": [
+              16,
+              0.28,
+              3.65
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "barrier",
+              "partId": "barrier-11"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-barrier-12",
+          "name": "roads-barrier-12",
+          "content": {
+            "type": "asset",
+            "asset": "roads-barrier"
+          },
+          "transform": {
+            "position": [
+              18,
+              0.28,
+              3.65
+            ],
+            "rotationDeg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "barrier",
+              "partId": "barrier-12"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-barrier-13",
+          "name": "roads-barrier-13",
+          "content": {
+            "type": "asset",
+            "asset": "roads-barrier"
+          },
+          "transform": {
+            "position": [
+              7.9,
+              0.07,
+              0.95
+            ],
+            "rotationDeg": [
+              0,
+              90,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "barrier",
+              "partId": "barrier-13"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-barrier-14",
+          "name": "roads-barrier-14",
+          "content": {
+            "type": "asset",
+            "asset": "roads-barrier"
+          },
+          "transform": {
+            "position": [
+              7.9,
+              0.07,
+              2.75
+            ],
+            "rotationDeg": [
+              0,
+              90,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "barrier",
+              "partId": "barrier-14"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-barrier-15",
+          "name": "roads-barrier-15",
+          "content": {
+            "type": "asset",
+            "asset": "roads-barrier"
+          },
+          "transform": {
+            "position": [
+              18.1,
+              0.07,
+              0.95
+            ],
+            "rotationDeg": [
+              0,
+              90,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "barrier",
+              "partId": "barrier-15"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "roads-barrier-16",
+          "name": "roads-barrier-16",
+          "content": {
+            "type": "asset",
+            "asset": "roads-barrier"
+          },
+          "transform": {
+            "position": [
+              18.1,
+              0.07,
+              2.75
+            ],
+            "rotationDeg": [
+              0,
+              90,
+              0
+            ]
+          },
+          "components": {
+            "RoadsTarget": {
+              "kind": "barrier",
+              "partId": "barrier-16"
+            },
+            "OneHandGrabbable": {},
+            "RayInteractable": {}
+          },
+          "visible": true
+        },
+        {
+          "id": "street-actors",
+          "name": "street-actors",
+          "content": {
+            "type": "asset",
+            "asset": "street-actors",
+            "castShadow": false,
+            "receiveShadow": false
+          },
+          "transform": {
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "roads-steps-panel",
+      "name": "roads-steps-panel",
+      "content": {
+        "type": "asset",
+        "asset": "roads-steps-ui"
+      },
+      "transform": {
+        "position": [
+          -0.22,
+          1.23,
+          -0.85
+        ],
+        "rotationDeg": [
+          -12,
+          12,
+          0
+        ]
+      },
+      "components": {
+        "RayInteractable": {},
+        "PokeInteractable": {}
+      },
+      "visible": true
+    },
+    {
+      "id": "roads-controls-panel",
+      "name": "roads-controls-panel",
+      "content": {
+        "type": "asset",
+        "asset": "roads-controls-ui"
+      },
+      "transform": {
+        "position": [
+          0.22,
+          1.23,
+          -0.85
+        ],
+        "rotationDeg": [
+          -12,
+          -12,
+          0
+        ]
+      },
+      "components": {
+        "RayInteractable": {},
+        "PokeInteractable": {}
+      },
+      "visible": true
+    },
+    {
+      "id": "roads-results-panel",
+      "name": "roads-results-panel",
+      "content": {
+        "type": "asset",
+        "asset": "results-ui"
+      },
+      "transform": {
+        "position": [
+          0,
+          1.32,
+          -0.46
+        ],
+        "rotationDeg": [
+          -24,
+          0,
+          0
+        ]
+      },
+      "components": {
+        "RayInteractable": {},
+        "PokeInteractable": {}
+      },
+      "visible": false
+    },
+    {
+      "id": "daylight-key",
+      "transform": {
+        "position": [
+          -2,
+          3,
+          1
+        ],
+        "rotationDeg": [
+          -42,
+          -28,
+          0
+        ]
+      },
+      "components": {
+        "com.iwsdk.components.DirectionalLight": {
+          "color": [
+            1,
+            0.94,
+            0.83,
+            1
+          ],
+          "intensity": 0.95,
+          "castShadow": false
+        }
+      }
+    }
+  ],
+  "authoring": {
+    "views": [
+      {
+        "id": "hero",
+        "role": "hero",
+        "projection": "perspective",
+        "position": [
+          0,
+          1.6,
+          -1
+        ],
+        "target": [
+          13,
+          1.0,
+          1.65
+        ],
+        "fov": 68
+      },
+      {
+        "id": "seated",
+        "role": "diagnostic",
+        "projection": "perspective",
+        "position": [
+          -10,
+          1.6,
+          9.5
+        ],
+        "target": [
+          4,
+          1.1,
+          1.5
+        ],
+        "fov": 80
+      }
+    ]
+  }
+}

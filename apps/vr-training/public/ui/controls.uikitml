@@ -1,0 +1,18 @@
+<style>
+  .controls-controls { flex-direction: column; width: 30; height: 15.5; justify-content: center; background-color: #f7f3e9; border-color: #d5ddcf; border-width: 0.08; border-radius: 1; padding-top: 1; padding-bottom: 1; padding-left: 1.2; padding-right: 1.2; gap: 0.6; color: #173d38; }
+  .controls-title { height: 5.5; font-size: 4.6; font-weight: 700; color: #173d38; }
+  .controls-button { height: 7; justify-content: center; align-items: center; background-color: #173d38; border-color: #173d38; border-width: 0.1; border-radius: 0.8; color: #ffffff; font-size: 3; font-weight: 700; cursor: pointer; }
+  .controls-safe { display: none; background-color: #174d2c; border-color: #b4e2b7; color: #ffffff; padding-left: 0.8; align-items: flex-start; }
+  .controls-hold { width: 20; text-align: center; font-size: 3; line-height: 1.1; font-weight: 700; }
+  .controls-actions { width: 27.6; }
+  .controls-progress { display: none; font-size: 3; font-weight: 700; color: #174d2c; }
+</style>
+<div id="panel-root" class="controls-controls">
+  <div id="action-title" class="controls-title">NOTIFY</div>
+  <div id="actions-row" class="controls-actions">
+    <button id="notify-control" class="controls-button">Notify control</button>
+    <button id="safe-to-work" class="controls-button controls-safe"><div id="hold-label" class="controls-hold">Safe to work
+Hold 0.8s</div></button>
+  </div>
+  <div id="hold-progress" class="controls-progress">HOLD FOR 0.8 SECONDS</div>
+</div>
