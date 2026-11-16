@@ -5,8 +5,8 @@
  * Server-side Meta AI instructor for CivicOps Field Training. The API key comes only from the
  * META_API_KEY app setting on the Static Web App. It is never logged, echoed or returned.
  * Optional settings: LLAMA_BASE_URL (default https://api.meta.ai/v1) and LLAMA_MODEL
- * (default muse-spark-1.3). Any OpenAI-compatible Meta endpoint works, including the Llama API
- * (https://api.llama.com/compat/v1).
+ * (default muse-spark-1.3). The hosted default is Meta AI Muse Spark. Those setting
+ * names are historical; they can point the function at another OpenAI-compatible endpoint.
  */
 const { handle } = require('./handler.js');
 

@@ -49,12 +49,12 @@ The CUDA flag only skips an optional ONNX Runtime download; no GPU is needed.
   locomotion, spatial UI), WebXR hand tracking, IWER emulator
 - TypeScript, three.js (super-three), @pmndrs/uikit, Vite, Vitest
 - Original Blender-built CC0 art, meshopt + KTX2 compression
-- Optional live AI instructor: a small Azure Static Web Apps managed function
-  (`apps/vr-training/api/instructor-ask`) answers trainee "why" questions through
-  Meta's OpenAI-compatible API (Meta AI Muse Spark by default; the Llama API also
-  works via `LLAMA_BASE_URL` / `LLAMA_MODEL`). The key is a server-side app setting
-  (`META_API_KEY`) and is not included in this repository or the browser bundle.
-  Without it, or on any error, the scripted instructor lines are used.
+- Live AI instructor: in the hosted judge build, trainee "why" questions are answered
+  by Meta's Muse Spark model through the Meta AI API, via a server-side Azure Static
+  Web Apps function at `/api/instructor/ask` (`apps/vr-training/api/instructor-ask`).
+  The key is a server-side app setting (`META_API_KEY`) and is not included in this
+  repository or the browser bundle. Without it, or on any error, the scripted
+  instructor lines are used.
 - Captions, scoring and results run entirely in the browser
 
 ## Repository layout
